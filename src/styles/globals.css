@@ -1,0 +1,309 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary: #22d3ee;
+  --secondary: #3b82f6;
+  --accent: #f59e0b;
+  --dark: #071128;
+  --darker: #030712;
+  --light: #e6eefb;
+  --text-muted: #9fb1cd;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background:
+    radial-gradient(circle at 10% 15%, rgba(34, 211, 238, 0.18) 0%, rgba(34, 211, 238, 0) 32%),
+    radial-gradient(circle at 88% 10%, rgba(59, 130, 246, 0.2) 0%, rgba(59, 130, 246, 0) 36%),
+    radial-gradient(circle at 55% 85%, rgba(245, 158, 11, 0.14) 0%, rgba(245, 158, 11, 0) 30%),
+    linear-gradient(145deg, #030712 0%, #0b1b3d 55%, #071128 100%);
+  color: var(--light);
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background-image:
+    linear-gradient(rgba(159, 177, 205, 0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(159, 177, 205, 0.06) 1px, transparent 1px);
+  background-size: 36px 36px;
+  mask-image: radial-gradient(circle at center, black 35%, transparent 90%);
+  z-index: -1;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 700;
+}
+
+h1 {
+  font-size: 4rem;
+  background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 50%, var(--accent) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 1.5rem;
+  display: inline-block;
+  width: 100%;
+}
+
+h2 {
+  font-size: 2.5rem;
+  background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 1rem;
+  display: inline-block;
+  width: 100%;
+}
+
+h3 {
+  font-size: 1.5rem;
+  color: var(--light);
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes glow {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(0, 217, 255, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 40px rgba(0, 217, 255, 0.6);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes rotateGradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.animate-fadeInUp {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+.animate-slideInLeft {
+  animation: slideInLeft 0.6s ease-out;
+}
+
+.animate-slideInRight {
+  animation: slideInRight 0.6s ease-out;
+}
+
+.animate-glow {
+  animation: glow 2s ease-in-out infinite;
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+/* Scrolling Animations */
+.scroll-fade {
+  opacity: 0.3;
+  transform: translateY(20px);
+  transition: all 0.6s ease-out;
+}
+
+.scroll-fade.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Glassmorphism */
+.glass {
+  background: linear-gradient(150deg, rgba(10, 22, 48, 0.76), rgba(7, 17, 40, 0.62));
+  backdrop-filter: blur(14px);
+  border: 1px solid rgba(130, 170, 255, 0.22);
+  border-radius: 16px;
+  box-shadow: 0 20px 50px rgba(2, 8, 23, 0.45);
+}
+
+.glass-hover {
+  transition: all 0.3s ease;
+}
+
+.glass-hover:hover {
+  transform: translateY(-4px);
+  background: linear-gradient(150deg, rgba(14, 30, 62, 0.86), rgba(8, 20, 44, 0.78));
+  border-color: rgba(34, 211, 238, 0.45);
+  box-shadow: 0 22px 44px rgba(3, 8, 26, 0.58);
+}
+
+/* Text utilities */
+.text-gradient {
+  background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Buttons */
+.btn {
+  padding: 12px 30px;
+  border: none;
+  border-radius: 999px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  letter-spacing: 0.02em;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 56%, var(--accent) 100%);
+  color: #041022;
+  box-shadow: 0 14px 30px rgba(59, 130, 246, 0.28);
+}
+
+.btn-primary:hover {
+  transform: translateY(-3px) scale(1.01);
+  box-shadow: 0 18px 34px rgba(34, 211, 238, 0.34);
+}
+
+.btn-secondary {
+  background: rgba(11, 25, 55, 0.66);
+  color: #b8e6ff;
+  border: 1px solid rgba(130, 170, 255, 0.4);
+}
+
+.btn-secondary:hover {
+  background: rgba(17, 37, 81, 0.88);
+  color: #d9f4ff;
+  box-shadow: 0 14px 30px rgba(37, 99, 235, 0.22);
+}
+
+/* Grid */
+.container {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.section {
+  padding: 108px 0;
+  position: relative;
+}
+
+.section::after {
+  content: '';
+  position: absolute;
+  left: 24px;
+  right: 24px;
+  bottom: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(130, 170, 255, 0.24), transparent);
+}
+
+.grid {
+  display: grid;
+  gap: 30px;
+}
+
+.grid-2 {
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.grid-3 {
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2.5rem;
+  }
+  
+  h2 {
+    font-size: 2rem;
+  }
+  
+  .section {
+    padding: 60px 0;
+  }
+
+  .section::after {
+    left: 14px;
+    right: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 2rem;
+  }
+  
+  h2 {
+    font-size: 1.5rem;
+  }
+}
