@@ -51,14 +51,14 @@ export default function Skills() {
       descKey: 'gallery.presentationsDesc',
       color: 'from-sky-500/80 to-emerald-500/80',
       images: [
-        '/images/Presentation/1.png',
-        '/images/Presentation/2.png',
-        '/images/Presentation/3.png',
-        '/images/Presentation/4.png',
-        '/images/Presentation/5.png',
-        '/images/Presentation/6.png',
-        '/images/Presentation/7.png',
-        '/images/Presentation/8.png'
+        '/MyPortfolio/images/Presentation/1.png',
+        '/MyPortfolio/images/Presentation/2.png',
+        '/MyPortfolio/images/Presentation/3.png',
+        '/MyPortfolio/images/Presentation/4.png',
+        '/MyPortfolio/images/Presentation/5.png',
+        '/MyPortfolio/images/Presentation/6.png',
+        '/MyPortfolio/images/Presentation/7.png',
+        '/MyPortfolio/images/Presentation/8.png'
       ]
     },
     {
@@ -67,11 +67,11 @@ export default function Skills() {
       descKey: 'gallery.databaseDesc',
       color: 'from-blue-500/80 to-sky-500/80',
       images: [
-        '/images/Database/1.png',
-        '/images/Database/2.png',
-        '/images/Database/3.png',
-        '/images/Database/Job%20Portal%20ERD.png',
-        '/images/Database/Team%20space%20ERD.jpg'
+        '/MyPortfolio/images/Database/1.png',
+        '/MyPortfolio/images/Database/2.png',
+        '/MyPortfolio/images/Database/3.png',
+        '/MyPortfolio/images/Database/Job%20Portal%20ERD.png',
+        '/MyPortfolio/images/Database/Team%20space%20ERD.jpg'
       ]
     },
     {
@@ -80,11 +80,11 @@ export default function Skills() {
       descKey: 'gallery.portfolioDesc',
       color: 'from-sky-500/80 to-blue-500/80',
       images: [
-        '/images/Portfolio/Website/1.png',
-        '/images/Portfolio/Website/2.png',
-        '/images/Portfolio/Website/3.png',
-        '/images/Portfolio/PDF/Screenshot%202025-10-17%20144255.png',
-        '/images/Portfolio/PDF/Screenshot%202025-10-17%20144309.png'
+        '/MyPortfolio/images/Portfolio/Website/1.png',
+        '/MyPortfolio/images/Portfolio/Website/2.png',
+        '/MyPortfolio/images/Portfolio/Website/3.png',
+        '/MyPortfolio/images/Portfolio/PDF/Screenshot%202025-10-17%20144255.png',
+        '/MyPortfolio/images/Portfolio/PDF/Screenshot%202025-10-17%20144309.png'
       ]
     },
     {
@@ -93,11 +93,11 @@ export default function Skills() {
       descKey: 'gallery.wordDocsDesc',
       color: 'from-amber-500/80 to-orange-500/80',
       images: [
-        '/images/Word/1.jpg',
-        '/images/Word/2.jpg',
-        '/images/Word/3.jpg',
-        '/images/Word/4.jpg',
-        '/images/Word/5.jpg'
+        '/MyPortfolio/images/Word/1.jpg',
+        '/MyPortfolio/images/Word/2.jpg',
+        '/MyPortfolio/images/Word/3.jpg',
+        '/MyPortfolio/images/Word/4.jpg',
+        '/MyPortfolio/images/Word/5.jpg'
       ]
     },
     {
@@ -106,10 +106,10 @@ export default function Skills() {
       descKey: 'gallery.landingPagesDesc',
       color: 'from-emerald-500/80 to-emerald-500/80',
       images: [
-        '/images/Landing%20Page/1.png',
-        '/images/Landing%20Page/2.png',
-        '/images/Landing%20Page/3.png',
-        '/images/Landing%20Page/4.png'
+        '/MyPortfolio/images/Landing%20Page/1.png',
+        '/MyPortfolio/images/Landing%20Page/2.png',
+        '/MyPortfolio/images/Landing%20Page/3.png',
+        '/MyPortfolio/images/Landing%20Page/4.png'
       ]
     },
     {
@@ -118,11 +118,11 @@ export default function Skills() {
       descKey: 'gallery.documentationDesc',
       color: 'from-rose-500/80 to-pink-500/80',
       images: [
-        '/images/CV/1.jpg',
-        '/images/CV/2.png',
-        '/images/CV/3.png',
-        '/images/CV/4.jpg',
-        '/images/CV/5.jpg'
+        '/MyPortfolio/images/CV/1.jpg',
+        '/MyPortfolio/images/CV/2.png',
+        '/MyPortfolio/images/CV/3.png',
+        '/MyPortfolio/images/CV/4.jpg',
+        '/MyPortfolio/images/CV/5.jpg'
       ]
     }
   ]

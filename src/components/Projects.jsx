@@ -22,26 +22,26 @@ export default function Projects() {
       tech: ['C#', '.NET Core', 'EF Core', 'SQL Server', 'JWT'],
       github: 'https://github.com/Khaled-Ahmed24/Teamspace',
       liveDemo: 'https://drive.google.com/file/d/1ARKvkOixVPmIhTNwIhsRd9zJlToVUt7L/view',
-      image: '/images/Team Space/Main.png',
+      image: '/MyPortfolio/images/Team Space/Main.png',
       images: [
-        '/images/Team Space/Main.png',
-        '/images/Team Space/Screenshot 2025-08-16 042303.png',
-        '/images/Team Space/Screenshot 2025-08-16 042320.png',
-        '/images/Team Space/Screenshot 2025-08-16 042335.png',
-        '/images/Team Space/Screenshot 2025-08-16 042359.png',
-        '/images/Team Space/Screenshot 2025-08-16 042528.png',
-        '/images/Team Space/Screenshot 2025-08-16 042547.png',
-        '/images/Team Space/Screenshot 2025-08-16 042615.png',
-        '/images/Team Space/Screenshot 2025-08-16 042634.png',
-        '/images/Team Space/Screenshot 2025-08-23 193720.png',
-        '/images/Team Space/Screenshot 2025-08-23 193747.png',
-        '/images/Team Space/Screenshot 2025-08-23 194234.png',
-        '/images/Team Space/Screenshot 2025-08-23 194255.png',
-        '/images/Team Space/Screenshot 2025-08-23 194348.png',
-        '/images/Team Space/Screenshot 2025-08-23 194436.png',
-        '/images/Team Space/Screenshot 2025-08-23 194501.png',
-        '/images/Team Space/Screenshot 2025-08-23 194858.png',
-        '/images/Team Space/Screenshot 2025-08-23 195313.png'
+        '/MyPortfolio/images/Team Space/Main.png',
+        '/MyPortfolio/images/Team Space/Screenshot 2025-08-16 042303.png',
+        '/MyPortfolio/images/Team Space/Screenshot 2025-08-16 042320.png',
+        '/MyPortfolio/images/Team Space/Screenshot 2025-08-16 042335.png',
+        '/MyPortfolio/images/Team Space/Screenshot 2025-08-16 042359.png',
+        '/MyPortfolio/images/Team Space/Screenshot 2025-08-16 042528.png',
+        '/MyPortfolio/images/Team Space/Screenshot 2025-08-16 042547.png',
+        '/MyPortfolio/images/Team Space/Screenshot 2025-08-16 042615.png',
+        '/MyPortfolio/images/Team Space/Screenshot 2025-08-16 042634.png',
+        '/MyPortfolio/images/Team Space/Screenshot 2025-08-23 193720.png',
+        '/MyPortfolio/images/Team Space/Screenshot 2025-08-23 193747.png',
+        '/MyPortfolio/images/Team Space/Screenshot 2025-08-23 194234.png',
+        '/MyPortfolio/images/Team Space/Screenshot 2025-08-23 194255.png',
+        '/MyPortfolio/images/Team Space/Screenshot 2025-08-23 194348.png',
+        '/MyPortfolio/images/Team Space/Screenshot 2025-08-23 194436.png',
+        '/MyPortfolio/images/Team Space/Screenshot 2025-08-23 194501.png',
+        '/MyPortfolio/images/Team Space/Screenshot 2025-08-23 194858.png',
+        '/MyPortfolio/images/Team Space/Screenshot 2025-08-23 195313.png'
       ]
     },
     {
@@ -57,13 +57,13 @@ export default function Projects() {
       tech: ['C#', '.NET', 'ASP.NET', 'SQL Server'],
       github: 'https://github.com/Khaled-Ahmed24/Job-Portal',
       liveDemo: 'https://drive.google.com/file/d/1uEebGHB2QjpeIREI7JQLceiL_BQug-29/view',
-      image: '/images/Job Hup/Main.png',
+      image: '/MyPortfolio/images/Job Hup/Main.png',
       images: [
-        '/images/Job Hup/Main.png',
-        '/images/Job Hup/Screenshot 2025-08-13 012747.png',
-        '/images/Job Hup/Screenshot 2025-08-13 012926.png',
-        '/images/Job Hup/Screenshot 2025-08-13 013057.png',
-        '/images/Job Hup/Screenshot 2025-08-13 013718.png'
+        '/MyPortfolio/images/Job Hup/Main.png',
+        '/MyPortfolio/images/Job Hup/Screenshot 2025-08-13 012747.png',
+        '/MyPortfolio/images/Job Hup/Screenshot 2025-08-13 012926.png',
+        '/MyPortfolio/images/Job Hup/Screenshot 2025-08-13 013057.png',
+        '/MyPortfolio/images/Job Hup/Screenshot 2025-08-13 013718.png'
       ]
     },
     {
@@ -79,16 +79,16 @@ export default function Projects() {
       tech: ['C#', '.NET', 'SQL Server', 'Real-time Processing'],
       github: 'https://github.com/Khaled-Ahmed24/Online_Exam',
       liveDemo: 'https://github.com/Khaled-Ahmed24/Online_Exam',
-      image: '/images/Examy/Main.png',
+      image: '/MyPortfolio/images/Examy/Main.png',
       images: [
-        '/images/Examy/Main.png',
-        '/images/Examy/Screenshot 2025-08-13 014552.png',
-        '/images/Examy/Screenshot 2025-08-13 014742.png',
-        '/images/Examy/Screenshot 2025-08-13 014803.png',
-        '/images/Examy/Screenshot 2025-08-13 015140.png',
-        '/images/Examy/Screenshot 2025-08-13 015156.png',
-        '/images/Examy/Screenshot 2025-08-13 015212.png',
-        '/images/Examy/Screenshot 2025-08-13 015249.png'
+        '/MyPortfolio/images/Examy/Main.png',
+        '/MyPortfolio/images/Examy/Screenshot 2025-08-13 014552.png',
+        '/MyPortfolio/images/Examy/Screenshot 2025-08-13 014742.png',
+        '/MyPortfolio/images/Examy/Screenshot 2025-08-13 014803.png',
+        '/MyPortfolio/images/Examy/Screenshot 2025-08-13 015140.png',
+        '/MyPortfolio/images/Examy/Screenshot 2025-08-13 015156.png',
+        '/MyPortfolio/images/Examy/Screenshot 2025-08-13 015212.png',
+        '/MyPortfolio/images/Examy/Screenshot 2025-08-13 015249.png'
       ]
     }
   ]

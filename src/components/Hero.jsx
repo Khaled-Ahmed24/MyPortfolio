@@ -122,7 +122,7 @@ export default function Hero() {
               <div className="relative glass rounded-3xl p-5">
                 <div className="relative rounded-2xl overflow-hidden border border-sky-400/30">
                   <img
-                    src="/images/Profile Picture.jpg"
+                    src="/MyPortfolio/images/Profile Picture.jpg"
                     alt="Profile"
                     className="w-full h-[430px] object-cover"
                   />
