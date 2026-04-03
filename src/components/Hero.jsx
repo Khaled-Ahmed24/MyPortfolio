@@ -42,8 +42,8 @@ export default function Hero() {
     >
       {/* Background Effects */}
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute top-20 left-20 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl animate-pulse" />
-        <div className="absolute bottom-20 right-20 w-96 h-96 bg-teal-500/10 rounded-full blur-3xl animate-pulse" />
+        <div className="absolute top-20 left-20 w-96 h-96 bg-sky-500/10 rounded-full blur-3xl animate-pulse" />
+        <div className="absolute bottom-20 right-20 w-96 h-96 bg-emerald-500/10 rounded-full blur-3xl animate-pulse" />
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-orange-500/5 rounded-full blur-3xl" />
       </div>
 
@@ -55,13 +55,13 @@ export default function Hero() {
       >
         <div className="grid lg:grid-cols-[1.2fr,0.8fr] gap-12 items-center">
           <div className="flex flex-col text-center lg:text-left items-center lg:items-start space-y-7">
-            <motion.div variants={itemVariants} className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-cyan-400/35 bg-slate-900/50 text-cyan-300 text-sm font-medium">
-              <span className="w-2 h-2 rounded-full bg-cyan-300 animate-pulse" />
+            <motion.div variants={itemVariants} className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-sky-400/35 bg-slate-900/50 text-sky-300 text-sm font-medium">
+              <span className="w-2 h-2 rounded-full bg-sky-300 animate-pulse" />
               {t('hero.badge')}
             </motion.div>
 
             <motion.div variants={itemVariants} className="space-y-4 max-w-3xl">
-              <p className="text-cyan-300/90 text-sm md:text-base font-semibold tracking-[0.22em] uppercase">
+              <p className="text-sky-300/90 text-sm md:text-base font-semibold tracking-[0.22em] uppercase">
                 {t('hero.tagline')}
               </p>
               <h1 className="text-5xl md:text-7xl font-bold leading-tight">
@@ -105,7 +105,7 @@ export default function Hero() {
                 { labelKey: 'hero.stat3', valueKey: 'hero.stat3value' }
               ].map((stat) => (
                 <div key={stat.labelKey} className="glass p-4 rounded-xl text-center lg:text-left">
-                  <p className="text-2xl font-bold text-cyan-300">{t(stat.valueKey)}</p>
+                  <p className="text-2xl font-bold text-sky-300">{t(stat.valueKey)}</p>
                   <p className="text-sm text-slate-300">{t(stat.labelKey)}</p>
                 </div>
               ))}
@@ -117,10 +117,10 @@ export default function Hero() {
               <motion.div
                 animate={{ rotate: 360 }}
                 transition={{ duration: 22, repeat: Infinity, ease: 'linear' }}
-                className="absolute inset-0 bg-gradient-to-r from-cyan-500/30 via-blue-500/20 to-amber-400/20 rounded-3xl blur-2xl"
+                className="absolute inset-0 bg-gradient-to-r from-sky-500/30 via-blue-500/20 to-amber-400/20 rounded-3xl blur-2xl"
               />
               <div className="relative glass rounded-3xl p-5">
-                <div className="relative rounded-2xl overflow-hidden border border-cyan-400/30">
+                <div className="relative rounded-2xl overflow-hidden border border-sky-400/30">
                   <img
                     src="/images/Profile Picture.jpg"
                     alt="Profile"
@@ -144,7 +144,7 @@ export default function Hero() {
             animate="animate"
             className="flex justify-center"
           >
-            <FiArrowDown size={32} className="text-cyan-300 animate-glow" />
+            <FiArrowDown size={32} className="text-sky-300 animate-glow" />
           </motion.div>
         </motion.div>
       </motion.div>

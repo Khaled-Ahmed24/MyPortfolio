@@ -6,7 +6,7 @@ export default function Footer() {
   const currentYear = new Date().getFullYear()
 
   return (
-    <footer className="bg-slate-950/70 border-t border-cyan-500/15 py-10 backdrop-blur-xl">
+    <footer className="bg-slate-950/70 border-t border-sky-500/15 py-10 backdrop-blur-xl">
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
@@ -16,7 +16,7 @@ export default function Footer() {
         <div className="flex flex-col md:flex-row justify-between items-center gap-6 glass p-6 rounded-2xl">
           <div>
             <h3 className="text-2xl font-bold mb-2">
-              <span className="bg-gradient-to-r from-cyan-400 to-teal-400 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-sky-400 to-emerald-400 bg-clip-text text-transparent">
                 Khaled Ahmed
               </span>
             </h3>
@@ -30,11 +30,11 @@ export default function Footer() {
 
           <div className="flex gap-4">
             <motion.a
-              href="https://github.com/KhaledAhmedKamal"
+              href="https://github.com/Khaled-Ahmed24"
               target="_blank"
               rel="noopener noreferrer"
               whileHover={{ scale: 1.1 }}
-              className="text-slate-300 hover:text-cyan-300 transition-colors"
+              className="text-slate-300 hover:text-sky-300 transition-colors"
             >
               {t('footer.github')}
             </motion.a>
@@ -43,7 +43,7 @@ export default function Footer() {
               target="_blank"
               rel="noopener noreferrer"
               whileHover={{ scale: 1.1 }}
-              className="text-slate-300 hover:text-cyan-300 transition-colors"
+              className="text-slate-300 hover:text-sky-300 transition-colors"
             >
               {t('footer.linkedin')}
             </motion.a>

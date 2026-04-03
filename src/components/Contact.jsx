@@ -30,7 +30,7 @@ export default function Contact() {
     {
       icon: FiGithub,
       labelKey: 'contact.github',
-      href: 'https://github.com/KhaledAhmedKamal',
+      href: 'https://github.com/Khaled-Ahmed24',
       color: 'hover:text-gray-300'
     },
     {
@@ -63,8 +63,8 @@ export default function Contact() {
 
   return (
     <section id="contact" className="section relative overflow-hidden">
-      <div className="absolute -bottom-40 -right-40 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl animate-pulse" />
-      <div className="absolute -top-20 -left-20 w-80 h-80 bg-teal-500/5 rounded-full blur-3xl" />
+      <div className="absolute -bottom-40 -right-40 w-96 h-96 bg-sky-500/10 rounded-full blur-3xl animate-pulse" />
+      <div className="absolute -top-20 -left-20 w-80 h-80 bg-emerald-500/5 rounded-full blur-3xl" />
 
       <motion.div
         variants={containerVariants}
@@ -75,7 +75,7 @@ export default function Contact() {
       >
         <motion.div variants={itemVariants} className="text-center mb-16">
           <h2 className="text-5xl md:text-6xl font-bold mb-6">{t('contact.title')}</h2>
-          <div className="w-20 h-1 bg-gradient-to-r from-cyan-400 to-teal-400 mx-auto" />
+          <div className="w-20 h-1 bg-gradient-to-r from-sky-400 to-emerald-400 mx-auto" />
         </motion.div>
 
         <div className="grid md:grid-cols-2 gap-12 mb-16">
@@ -102,8 +102,8 @@ export default function Contact() {
                     className="glass p-4 rounded-lg flex items-center gap-4 group glass-hover"
                     whileHover={{ x: 10 }}
                   >
-                    <div className="p-3 bg-gradient-to-r from-cyan-500/20 to-teal-500/20 rounded-lg group-hover:from-cyan-500/40 group-hover:to-teal-500/40 transition-colors">
-                      <IconComponent size={24} className="text-cyan-400" />
+                    <div className="p-3 bg-gradient-to-r from-sky-500/20 to-emerald-500/20 rounded-lg group-hover:from-sky-500/40 group-hover:to-emerald-500/40 transition-colors">
+                      <IconComponent size={24} className="text-sky-400" />
                     </div>
                     <div>
                       <p className="text-sm text-gray-400">{t(info.labelKey)}</p>
@@ -129,7 +129,7 @@ export default function Contact() {
                 <label className="block text-sm font-medium mb-2">{t('contact.name')}</label>
                 <input
                   type="text"
-                  className="w-full bg-slate-800 border border-slate-700 rounded-lg px-4 py-3 text-white focus:border-cyan-400 focus:outline-none transition-colors"
+                  className="w-full bg-slate-800 border border-slate-700 rounded-lg px-4 py-3 text-white focus:border-sky-400 focus:outline-none transition-colors"
                   placeholder={t('contact.namePlaceholder')}
                 />
               </div>
@@ -138,7 +138,7 @@ export default function Contact() {
                 <label className="block text-sm font-medium mb-2">{t('contact.email')}</label>
                 <input
                   type="email"
-                  className="w-full bg-slate-800 border border-slate-700 rounded-lg px-4 py-3 text-white focus:border-cyan-400 focus:outline-none transition-colors"
+                  className="w-full bg-slate-800 border border-slate-700 rounded-lg px-4 py-3 text-white focus:border-sky-400 focus:outline-none transition-colors"
                   placeholder={t('contact.emailPlaceholder')}
                 />
               </div>
@@ -147,7 +147,7 @@ export default function Contact() {
                 <label className="block text-sm font-medium mb-2">{t('contact.message')}</label>
                 <textarea
                   rows="5"
-                  className="w-full bg-slate-800 border border-slate-700 rounded-lg px-4 py-3 text-white focus:border-cyan-400 focus:outline-none transition-colors resize-none"
+                  className="w-full bg-slate-800 border border-slate-700 rounded-lg px-4 py-3 text-white focus:border-sky-400 focus:outline-none transition-colors resize-none"
                   placeholder={t('contact.messagePlaceholder')}
                 />
               </div>
@@ -181,7 +181,7 @@ export default function Contact() {
                   rel="noopener noreferrer"
                   whileHover={{ scale: 1.2, rotate: 10 }}
                   whileTap={{ scale: 0.9 }}
-                  className={`p-4 bg-gradient-to-r from-cyan-500/20 to-teal-500/20 rounded-full text-cyan-400 ${link.color} transition-colors`}
+                  className={`p-4 bg-gradient-to-r from-sky-500/20 to-emerald-500/20 rounded-full text-sky-400 ${link.color} transition-colors`}
                   aria-label={t(link.labelKey)}
                 >
                   <IconComponent size={28} />

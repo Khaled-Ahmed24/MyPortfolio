@@ -29,7 +29,7 @@ export default function Navbar({ isScrolled }) {
       animate={{ y: 0 }}
       transition={{ duration: 0.5 }}
       className={`fixed top-0 w-full z-50 transition-all duration-300 ${
-        isScrolled ? 'backdrop-blur-xl bg-slate-950/70 border-b border-cyan-500/20 shadow-[0_8px_30px_rgba(2,8,23,0.45)]' : 'bg-transparent'
+        isScrolled ? 'backdrop-blur-xl bg-slate-950/70 border-b border-sky-500/20 shadow-[0_8px_30px_rgba(2,8,23,0.45)]' : 'bg-transparent'
       }`}
     >
       <div className="container flex items-center justify-between h-20">
@@ -39,7 +39,7 @@ export default function Navbar({ isScrolled }) {
           transition={{ delay: 0.2 }}
           className="text-2xl font-bold"
         >
-          <span className="bg-gradient-to-r from-cyan-400 to-teal-400 bg-clip-text text-transparent">
+          <span className="bg-gradient-to-r from-sky-400 to-emerald-400 bg-clip-text text-transparent">
             Khaled Ahmed
           </span>
         </motion.div>
@@ -53,7 +53,7 @@ export default function Navbar({ isScrolled }) {
               initial={{ opacity: 0, y: -10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.1 * idx }}
-              className="text-slate-300 hover:text-cyan-300 hover:bg-slate-800/80 transition-all duration-200 font-medium px-4 py-2 rounded-full"
+              className="text-slate-300 hover:text-sky-300 hover:bg-slate-800/80 transition-all duration-200 font-medium px-4 py-2 rounded-full"
             >
               {t(`nav.${link.key}`)}
             </motion.a>
@@ -67,7 +67,7 @@ export default function Navbar({ isScrolled }) {
             <motion.button
               onClick={() => changeLanguage(i18n.language === 'en' ? 'ar' : 'en')}
               whileHover={{ scale: 1.08 }}
-              className="px-4 py-1.5 rounded-full font-medium transition-colors bg-cyan-500/30 text-cyan-300 border border-cyan-400/60 hover:bg-cyan-500/40"
+              className="px-4 py-1.5 rounded-full font-medium transition-colors bg-sky-500/30 text-sky-300 border border-sky-400/60 hover:bg-sky-500/40"
             >
               {i18n.language === 'en' ? 'AR' : 'EN'}
             </motion.button>
@@ -89,14 +89,14 @@ export default function Navbar({ isScrolled }) {
           initial={{ opacity: 0, height: 0 }}
           animate={{ opacity: 1, height: 'auto' }}
           exit={{ opacity: 0, height: 0 }}
-          className="md:hidden backdrop-blur-xl bg-slate-950/85 border-t border-cyan-500/20"
+          className="md:hidden backdrop-blur-xl bg-slate-950/85 border-t border-sky-500/20"
         >
           <div className="container py-6 flex flex-col gap-4">
             {navLinks.map((link) => (
               <a
                 key={link.key}
                 href={link.href}
-                className="text-gray-300 hover:text-cyan-400 transition-colors"
+                className="text-gray-300 hover:text-sky-400 transition-colors"
                 onClick={() => setIsOpen(false)}
               >
                 {t(`nav.${link.key}`)}
@@ -107,7 +107,7 @@ export default function Navbar({ isScrolled }) {
                 changeLanguage(i18n.language === 'en' ? 'ar' : 'en')
                 setIsOpen(false)
               }}
-              className="w-full py-2 rounded-lg font-medium transition-colors bg-cyan-500/30 text-cyan-300 border border-cyan-400/60 hover:bg-cyan-500/40 mt-4 border-t border-slate-600/60 pt-4"
+              className="w-full py-2 rounded-lg font-medium transition-colors bg-sky-500/30 text-sky-300 border border-sky-400/60 hover:bg-sky-500/40 mt-4 border-t border-slate-600/60 pt-4"
             >
               {i18n.language === 'en' ? 'العربية' : 'English'}
             </button>

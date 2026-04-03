@@ -7,11 +7,11 @@ export default {
   theme: {
     extend: {
       colors: {
-        primary: '#00d9ff',
-        secondary: '#2dd4bf',
-        accent: '#f97316',
-        dark: '#0f172a',
-        darker: '#020617',
+        primary: '#38bdf8',
+        secondary: '#34d399',
+        accent: '#f59e0b',
+        dark: '#0b132b',
+        darker: '#030712',
       },
       fontFamily: {
         sans: ['Poppins', 'sans-serif'],
@@ -41,8 +41,8 @@ export default {
           '100%': { opacity: '1', transform: 'translateX(0)' },
         },
         glow: {
-          '0%, 100%': { boxShadow: '0 0 20px rgba(0, 217, 255, 0.3)' },
-          '50%': { boxShadow: '0 0 40px rgba(0, 217, 255, 0.6)' },
+          '0%, 100%': { boxShadow: '0 0 20px rgba(56, 189, 248, 0.28)' },
+          '50%': { boxShadow: '0 0 40px rgba(56, 189, 248, 0.5)' },
         },
         float: {
           '0%, 100%': { transform: 'translateY(0px)' },

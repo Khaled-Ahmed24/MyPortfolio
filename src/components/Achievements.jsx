@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import { FiAward, FiTrendingUp, FiCode, FiUsers } from 'react-icons/fi'
+import { FiAward, FiTrendingUp, FiCode, FiUsers, FiExternalLink } from 'react-icons/fi'
 import { useTranslation } from 'react-i18next'
 
 export default function Achievements() {
@@ -10,7 +10,8 @@ export default function Achievements() {
       icon: FiAward,
       number: '29th / 450+',
       titleKey: 'achievements.achievement1Title',
-      descKey: 'achievements.achievement1Desc'
+      descKey: 'achievements.achievement1Desc',
+      proofLink: 'https://icpc.global/ICPCID/DRPKH7FDT8KN'
     },
     {
       icon: FiTrendingUp,
@@ -29,6 +30,32 @@ export default function Achievements() {
       number: 'Mentor',
       titleKey: 'achievements.achievement4Title',
       descKey: 'achievements.achievement4Desc'
+    }
+  ]
+
+  const timelineItems = [
+    {
+      dateKey: 'achievements.timeline1Date',
+      titleKey: 'achievements.timeline1Title',
+      descKey: 'achievements.timeline1Desc',
+      extraLink: 'https://www.facebook.com/icpcassiutt'
+    },
+    {
+      dateKey: 'achievements.timeline2Date',
+      titleKey: 'achievements.timeline2Title',
+      descKey: 'achievements.timeline2Desc',
+      proofLink: 'https://drive.google.com/drive/u/0/folders/1-mxWT5QyCc498wY474pM4NjZvk_oGnpT'
+    },
+    {
+      dateKey: 'achievements.timeline3Date',
+      titleKey: 'achievements.timeline3Title',
+      descKey: 'achievements.timeline3Desc',
+      proofLink: 'https://drive.google.com/drive/u/0/folders/1ivcClVqBZlruvZa0pO47Eb5nwxmOxH4w'
+    },
+    {
+      dateKey: 'achievements.timeline4Date',
+      titleKey: 'achievements.timeline4Title',
+      descKey: 'achievements.timeline4Desc',
     }
   ]
 
@@ -65,7 +92,7 @@ export default function Achievements() {
       >
         <motion.div variants={itemVariants} className="text-center mb-16">
           <h2 className="text-5xl md:text-6xl font-bold mb-6">{t('achievements.title')}</h2>
-          <div className="w-20 h-1 bg-gradient-to-r from-cyan-400 to-teal-400 mx-auto" />
+          <div className="w-20 h-1 bg-gradient-to-r from-sky-400 to-emerald-400 mx-auto" />
         </motion.div>
 
         <motion.div
@@ -84,13 +111,13 @@ export default function Achievements() {
                   whileHover={{ scale: 1.1, rotate: 5 }}
                   className="mb-4 flex justify-center"
                 >
-                  <div className="p-4 bg-gradient-to-r from-cyan-500/20 to-teal-500/20 rounded-lg group-hover:from-cyan-500/40 group-hover:to-teal-500/40 transition-colors">
-                    <IconComponent size={32} className="text-cyan-400" />
+                  <div className="p-4 bg-gradient-to-r from-sky-500/20 to-emerald-500/20 rounded-lg group-hover:from-sky-500/40 group-hover:to-emerald-500/40 transition-colors">
+                    <IconComponent size={32} className="text-sky-400" />
                   </div>
                 </motion.div>
 
                 <motion.h3
-                  className="text-2xl font-bold text-cyan-400 mb-2"
+                  className="text-2xl font-bold text-sky-400 mb-2"
                   whileHover={{ scale: 1.05 }}
                 >
                   {achievement.number}
@@ -103,6 +130,20 @@ export default function Achievements() {
                 <p className="text-gray-400 text-sm leading-relaxed">
                   {t(achievement.descKey)}
                 </p>
+
+                {achievement.proofLink && (
+                  <motion.a
+                    href={achievement.proofLink}
+                    target="_blank"
+                    rel="noreferrer"
+                    whileHover={{ scale: 1.03 }}
+                    whileTap={{ scale: 0.97 }}
+                    className="btn btn-secondary text-sm px-4 py-2 inline-flex items-center gap-2 mt-4"
+                  >
+                    <FiExternalLink />
+                    {t('achievements.viewCertificate')}
+                  </motion.a>
+                )}
               </motion.div>
             )
           })}
@@ -113,30 +154,9 @@ export default function Achievements() {
           variants={itemVariants}
           className="mt-20 glass p-8 rounded-xl"
         >
-          <h3 className="text-2xl font-bold mb-8 text-cyan-400">{t('achievements.title')}</h3>
+          <h3 className="text-2xl font-bold mb-8 text-sky-400">{t('achievements.title')}</h3>
           <div className="space-y-6">
-            {[
-              {
-                dateKey: 'achievements.timeline1Date',
-                titleKey: 'achievements.timeline1Title',
-                descKey: 'achievements.timeline1Desc'
-              },
-              {
-                dateKey: 'achievements.timeline2Date',
-                titleKey: 'achievements.timeline2Title',
-                descKey: 'achievements.timeline2Desc'
-              },
-              {
-                dateKey: 'achievements.timeline3Date',
-                titleKey: 'achievements.timeline3Title',
-                descKey: 'achievements.timeline3Desc'
-              },
-              {
-                dateKey: 'achievements.timeline4Date',
-                titleKey: 'achievements.timeline4Title',
-                descKey: 'achievements.timeline4Desc'
-              }
-            ].map((item, idx) => (
+            {timelineItems.map((item, idx) => (
               <motion.div
                 key={idx}
                 initial={{ opacity: 0, x: -20 }}
@@ -146,20 +166,49 @@ export default function Achievements() {
                 className="flex gap-6 pb-6 border-b border-slate-700 last:border-b-0"
               >
                 <div className="relative flex flex-col items-center">
-                  <div className="w-4 h-4 bg-cyan-400 rounded-full relative z-10" />
+                  <div className="w-4 h-4 bg-sky-400 rounded-full relative z-10" />
                   {idx < 2 && (
-                    <div className="w-0.5 h-16 bg-gradient-to-b from-cyan-400 to-transparent mt-2" />
+                    <div className="w-0.5 h-16 bg-gradient-to-b from-sky-400 to-transparent mt-2" />
                   )}
                 </div>
                 <div className="flex-1">
-                  <p className="text-cyan-400 text-sm font-semibold">{t(item.dateKey)}</p>
+                  <p className="text-sky-400 text-sm font-semibold">{t(item.dateKey)}</p>
                   <h4 className="text-lg font-bold mt-1">{t(item.titleKey)}</h4>
                   <p className="text-gray-400 mt-2">{t(item.descKey)}</p>
+                  <div className="mt-4 flex flex-wrap gap-2">
+                    {item.proofLink &&(
+                      <motion.a
+                      href={item.proofLink}
+                      target="_blank"
+                      rel="noreferrer"
+                      whileHover={{ scale: 1.03 }}
+                      whileTap={{ scale: 0.97 }}
+                      className="btn btn-secondary text-sm px-4 py-2 inline-flex items-center gap-2"
+                    >
+                      <FiExternalLink />
+                      {t('achievements.viewCertificate')}
+                    </motion.a>
+                    )}
+                    {item.extraLink && (
+                      <motion.a
+                        href={item.extraLink}
+                        target="_blank"
+                        rel="noreferrer"
+                        whileHover={{ scale: 1.03 }}
+                        whileTap={{ scale: 0.97 }}
+                        className="btn btn-secondary text-sm px-4 py-2 inline-flex items-center gap-2"
+                      >
+                        <FiExternalLink />
+                        {t('achievements.communityPage')}
+                      </motion.a>
+                    )}
+                  </div>
                 </div>
               </motion.div>
             ))}
           </div>
         </motion.div>
+
       </motion.div>
     </section>
   )

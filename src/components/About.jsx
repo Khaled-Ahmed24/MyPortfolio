@@ -25,7 +25,7 @@ export default function About() {
 
   return (
     <section id="about" className="section relative overflow-hidden">
-      <div className="absolute -top-40 -right-40 w-80 h-80 bg-teal-500/5 rounded-full blur-3xl" />
+      <div className="absolute -top-40 -right-40 w-80 h-80 bg-emerald-500/5 rounded-full blur-3xl" />
       
       <motion.div
         variants={containerVariants}
@@ -36,7 +36,7 @@ export default function About() {
       >
         <motion.div variants={itemVariants} className="text-center mb-16">
           <h2 className="text-5xl md:text-6xl font-bold mb-6">{t('about.title')}</h2>
-          <div className="w-20 h-1 bg-gradient-to-r from-cyan-400 to-teal-400 mx-auto" />
+          <div className="w-20 h-1 bg-gradient-to-r from-sky-400 to-emerald-400 mx-auto" />
         </motion.div>
 
         <div className="grid md:grid-cols-2 gap-12 items-center">
@@ -46,14 +46,14 @@ export default function About() {
             className="relative"
           >
             <div className="relative w-full aspect-square rounded-2xl overflow-hidden">
-              <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-teal-500/20 z-10" />
+              <div className="absolute inset-0 bg-gradient-to-r from-sky-500/20 to-emerald-500/20 z-10" />
               <img
                 src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=500&h=500&fit=crop"
                 alt="About"
                 className="w-full h-full object-cover"
               />
             </div>
-            <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-gradient-to-r from-cyan-400 to-teal-400 rounded-lg opacity-20 blur-lg" />
+            <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-gradient-to-r from-sky-400 to-emerald-400 rounded-lg opacity-20 blur-lg" />
           </motion.div>
 
           {/* Right Side - Content */}
@@ -76,19 +76,19 @@ export default function About() {
               <h3 className="text-2xl font-bold mb-4">{t('about.heading3')}</h3>
               <ul className="space-y-2 text-gray-300">
                 <li className="flex items-center gap-3">
-                  <span className="w-2 h-2 bg-cyan-400 rounded-full" />
+                  <span className="w-2 h-2 bg-sky-400 rounded-full" />
                   {t('about.item1')}
                 </li>
                 <li className="flex items-center gap-3">
-                  <span className="w-2 h-2 bg-cyan-400 rounded-full" />
+                  <span className="w-2 h-2 bg-sky-400 rounded-full" />
                   {t('about.item2')}
                 </li>
                 <li className="flex items-center gap-3">
-                  <span className="w-2 h-2 bg-cyan-400 rounded-full" />
+                  <span className="w-2 h-2 bg-sky-400 rounded-full" />
                   {t('about.item3')}
                 </li>
                 <li className="flex items-center gap-3">
-                  <span className="w-2 h-2 bg-cyan-400 rounded-full" />
+                  <span className="w-2 h-2 bg-sky-400 rounded-full" />
                   {t('about.item4')}
                 </li>
               </ul>

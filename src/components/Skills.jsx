@@ -49,7 +49,7 @@ export default function Skills() {
       id: 'presentations',
       titleKey: 'gallery.presentations',
       descKey: 'gallery.presentationsDesc',
-      color: 'from-purple-500/80 to-violet-500/80',
+      color: 'from-sky-500/80 to-emerald-500/80',
       images: [
         '/images/Presentation/1.png',
         '/images/Presentation/2.png',
@@ -65,7 +65,7 @@ export default function Skills() {
       id: 'database',
       titleKey: 'gallery.database',
       descKey: 'gallery.databaseDesc',
-      color: 'from-blue-500/80 to-cyan-500/80',
+      color: 'from-blue-500/80 to-sky-500/80',
       images: [
         '/images/Database/1.png',
         '/images/Database/2.png',
@@ -91,7 +91,7 @@ export default function Skills() {
       id: 'word',
       titleKey: 'gallery.wordDocs',
       descKey: 'gallery.wordDocsDesc',
-      color: 'from-indigo-500/80 to-purple-500/80',
+      color: 'from-amber-500/80 to-orange-500/80',
       images: [
         '/images/Word/1.jpg',
         '/images/Word/2.jpg',
@@ -104,7 +104,7 @@ export default function Skills() {
       id: 'landing',
       titleKey: 'gallery.landingPages',
       descKey: 'gallery.landingPagesDesc',
-      color: 'from-emerald-500/80 to-teal-500/80',
+      color: 'from-emerald-500/80 to-emerald-500/80',
       images: [
         '/images/Landing%20Page/1.png',
         '/images/Landing%20Page/2.png',
@@ -149,7 +149,7 @@ export default function Skills() {
 
   return (
     <section id="skills" className="section relative overflow-hidden">
-      <div className="absolute -top-20 -left-20 w-80 h-80 bg-cyan-500/5 rounded-full blur-3xl" />
+      <div className="absolute -top-20 -left-20 w-80 h-80 bg-sky-500/5 rounded-full blur-3xl" />
       
       <motion.div
         variants={containerVariants}
@@ -163,12 +163,12 @@ export default function Skills() {
           <p className="text-slate-300 max-w-3xl mx-auto text-lg">
             {t('skills.description')}
           </p>
-          <div className="w-20 h-1 bg-gradient-to-r from-cyan-400 to-teal-400 mx-auto" />
+          <div className="w-20 h-1 bg-gradient-to-r from-sky-400 to-emerald-400 mx-auto" />
         </motion.div>
 
         <div className="grid lg:grid-cols-2 gap-8">
           <motion.div variants={itemVariants} className="glass p-8 rounded-xl">
-            <h3 className="text-2xl font-bold mb-2 text-cyan-400">{t('skills.technical')}</h3>
+            <h3 className="text-2xl font-bold mb-2 text-sky-400">{t('skills.technical')}</h3>
             <p className="text-slate-400 mb-6 text-sm">{t('skills.technicalDesc')}</p>
             <div className="space-y-6">
               {technicalSkills.map((skillGroup) => (
@@ -178,7 +178,7 @@ export default function Skills() {
                     {skillGroup.itemKeys.map((itemKey) => (
                       <span
                         key={itemKey}
-                        className="px-3 py-1.5 rounded-full text-sm bg-slate-800/80 border border-cyan-500/30 text-slate-200"
+                        className="px-3 py-1.5 rounded-full text-sm bg-slate-800/80 border border-sky-500/30 text-slate-200"
                       >
                         {t(itemKey)}
                       </span>
@@ -190,7 +190,7 @@ export default function Skills() {
           </motion.div>
 
           <motion.div variants={itemVariants} className="glass p-8 rounded-xl">
-            <h3 className="text-2xl font-bold mb-2 text-teal-300">{t('skills.nontechnical')}</h3>
+            <h3 className="text-2xl font-bold mb-2 text-emerald-300">{t('skills.nontechnical')}</h3>
             <p className="text-slate-400 mb-6 text-sm">{t('skills.nontechnicalDesc')}</p>
             <div className="space-y-6">
               {otherSkills.map((skillGroup) => (
@@ -200,7 +200,7 @@ export default function Skills() {
                     {skillGroup.itemKeys.map((itemKey) => (
                       <span
                         key={itemKey}
-                        className="px-3 py-1.5 rounded-full text-sm bg-slate-800/80 border border-teal-500/30 text-slate-200"
+                        className="px-3 py-1.5 rounded-full text-sm bg-slate-800/80 border border-emerald-500/30 text-slate-200"
                       >
                         {t(itemKey)}
                       </span>
