@@ -159,27 +159,27 @@ export default function Skills() {
         viewport={{ once: true, amount: 0.2 }}
         className="container"
       >
-        <motion.div variants={itemVariants} className="text-center mb-16">
-          <h2 className="text-5xl md:text-6xl font-bold mb-6">{t('skills.title')}</h2>
-          <p className="text-slate-300 max-w-3xl mx-auto text-lg">
+        <motion.div variants={itemVariants} className="text-center mb-12 md:mb-16">
+          <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-6">{t('skills.title')}</h2>
+          <p className="text-slate-300 max-w-3xl mx-auto text-base sm:text-lg">
             {t('skills.description')}
           </p>
           <div className="w-20 h-1 bg-gradient-to-r from-sky-400 to-emerald-400 mx-auto" />
         </motion.div>
 
-        <div className="grid lg:grid-cols-2 gap-8">
-          <motion.div variants={itemVariants} className="glass p-8 rounded-xl">
-            <h3 className="text-2xl font-bold mb-2 text-sky-400">{t('skills.technical')}</h3>
+        <div className="grid lg:grid-cols-2 gap-6 md:gap-8">
+          <motion.div variants={itemVariants} className="glass p-5 sm:p-6 md:p-8 rounded-xl min-w-0">
+            <h3 className="text-xl sm:text-2xl font-bold mb-2 text-sky-400">{t('skills.technical')}</h3>
             <p className="text-slate-400 mb-6 text-sm">{t('skills.technicalDesc')}</p>
             <div className="space-y-6">
               {technicalSkills.map((skillGroup) => (
                 <div key={skillGroup.categoryKey}>
-                  <h4 className="text-lg font-semibold text-white mb-3">{t(skillGroup.categoryKey)}</h4>
+                  <h4 className="text-base sm:text-lg font-semibold text-white mb-3">{t(skillGroup.categoryKey)}</h4>
                   <div className="flex flex-wrap gap-2">
                     {skillGroup.itemKeys.map((itemKey) => (
                       <span
                         key={itemKey}
-                        className="px-3 py-1.5 rounded-full text-sm bg-slate-800/80 border border-sky-500/30 text-slate-200"
+                        className="max-w-full px-3 py-1.5 rounded-full text-xs sm:text-sm bg-slate-800/80 border border-sky-500/30 text-slate-200 break-words whitespace-normal"
                       >
                         {t(itemKey)}
                       </span>
@@ -190,18 +190,18 @@ export default function Skills() {
             </div>
           </motion.div>
 
-          <motion.div variants={itemVariants} className="glass p-8 rounded-xl">
-            <h3 className="text-2xl font-bold mb-2 text-emerald-300">{t('skills.nontechnical')}</h3>
+          <motion.div variants={itemVariants} className="glass p-5 sm:p-6 md:p-8 rounded-xl min-w-0">
+            <h3 className="text-xl sm:text-2xl font-bold mb-2 text-emerald-300">{t('skills.nontechnical')}</h3>
             <p className="text-slate-400 mb-6 text-sm">{t('skills.nontechnicalDesc')}</p>
             <div className="space-y-6">
               {otherSkills.map((skillGroup) => (
                 <div key={skillGroup.categoryKey}>
-                  <h4 className="text-lg font-semibold text-white mb-3">{t(skillGroup.categoryKey)}</h4>
+                  <h4 className="text-base sm:text-lg font-semibold text-white mb-3">{t(skillGroup.categoryKey)}</h4>
                   <div className="flex flex-wrap gap-2">
                     {skillGroup.itemKeys.map((itemKey) => (
                       <span
                         key={itemKey}
-                        className="px-3 py-1.5 rounded-full text-sm bg-slate-800/80 border border-emerald-500/30 text-slate-200"
+                        className="max-w-full px-3 py-1.5 rounded-full text-xs sm:text-sm bg-slate-800/80 border border-emerald-500/30 text-slate-200 break-words whitespace-normal"
                       >
                         {t(itemKey)}
                       </span>

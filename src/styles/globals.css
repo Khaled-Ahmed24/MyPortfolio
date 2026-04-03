@@ -36,6 +36,14 @@ body {
   min-height: 100vh;
 }
 
+#root {
+  overflow-x: hidden;
+}
+
+section[id] {
+  scroll-margin-top: 92px;
+}
+
 body::before {
   content: '';
   position: fixed;
@@ -304,6 +312,10 @@ h3 {
   .btn {
     padding: 11px 22px;
     font-size: 0.95rem;
+  }
+
+  section[id] {
+    scroll-margin-top: 84px;
   }
 }
 

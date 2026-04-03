@@ -73,12 +73,12 @@ export default function Contact() {
         viewport={{ once: true, amount: 0.3 }}
         className="container"
       >
-        <motion.div variants={itemVariants} className="text-center mb-16">
-          <h2 className="text-5xl md:text-6xl font-bold mb-6">{t('contact.title')}</h2>
+        <motion.div variants={itemVariants} className="text-center mb-12 md:mb-16">
+          <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-6">{t('contact.title')}</h2>
           <div className="w-20 h-1 bg-gradient-to-r from-sky-400 to-emerald-400 mx-auto" />
         </motion.div>
 
-        <div className="grid md:grid-cols-2 gap-12 mb-16">
+        <div className="grid md:grid-cols-2 gap-8 md:gap-12 mb-16">
           {/* Left Side - Call to Action */}
           <motion.div
             variants={itemVariants}
@@ -99,15 +99,15 @@ export default function Contact() {
                     key={idx}
                     href={info.href}
                     variants={itemVariants}
-                    className="glass p-4 rounded-lg flex items-center gap-4 group glass-hover"
+                    className="glass p-4 rounded-lg flex items-center gap-3 sm:gap-4 group glass-hover min-w-0"
                     whileHover={{ x: 10 }}
                   >
                     <div className="p-3 bg-gradient-to-r from-sky-500/20 to-emerald-500/20 rounded-lg group-hover:from-sky-500/40 group-hover:to-emerald-500/40 transition-colors">
                       <IconComponent size={24} className="text-sky-400" />
                     </div>
-                    <div>
+                    <div className="min-w-0 flex-1">
                       <p className="text-sm text-gray-400">{t(info.labelKey)}</p>
-                      <p className="font-semibold text-white">{info.value}</p>
+                      <p className="font-semibold text-white break-all">{info.value}</p>
                     </div>
                   </motion.a>
                 )
@@ -118,7 +118,7 @@ export default function Contact() {
           {/* Right Side - CTA Form */}
           <motion.div
             variants={itemVariants}
-            className="glass p-8 rounded-xl"
+            className="glass p-5 sm:p-6 md:p-8 rounded-xl"
           >
             <h3 className="text-2xl font-bold mb-2">{t('contact.formTitle')}</h3>
             <p className="text-gray-400 mb-6 text-sm">
