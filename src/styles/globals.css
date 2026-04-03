@@ -296,6 +296,15 @@ h3 {
     left: 14px;
     right: 14px;
   }
+
+  .container {
+    padding: 0 18px;
+  }
+
+  .btn {
+    padding: 11px 22px;
+    font-size: 0.95rem;
+  }
 }
 
 @media (max-width: 480px) {

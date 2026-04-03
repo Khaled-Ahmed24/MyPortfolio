@@ -136,8 +136,8 @@ export default function Projects() {
         viewport={{ once: true, amount: 0.2 }}
         className="container"
       >
-        <motion.div variants={itemVariants} className="text-center mb-16">
-          <h2 className="text-5xl md:text-6xl font-bold mb-6">{t('projects.title')}</h2>
+        <motion.div variants={itemVariants} className="text-center mb-12 md:mb-16">
+          <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-6">{t('projects.title')}</h2>
           <div className="w-20 h-1 bg-gradient-to-r from-sky-400 to-emerald-400 mx-auto" />
         </motion.div>
 
@@ -222,26 +222,26 @@ export default function Projects() {
               animate={{ scale: 1, opacity: 1 }}
               exit={{ scale: 0.9, opacity: 0 }}
               onClick={(e) => e.stopPropagation()}
-              className="glass max-w-6xl w-full max-h-[86vh] overflow-y-auto rounded-2xl"
+              className="glass max-w-6xl w-full max-h-[90vh] overflow-y-auto rounded-2xl"
             >
               <div className="relative">
                 <img
                   src={selectedProjectImages[activeImageIndex] ?? selectedProject.image}
                   alt={t(selectedProject.titleKey)}
-                  className="w-full h-96 object-cover"
+                  className="w-full h-64 sm:h-80 md:h-96 object-cover"
                 />
                 {selectedProjectImages.length > 1 && (
                   <>
                     <button
                       onClick={showPrevImage}
-                      className="absolute left-4 top-1/2 -translate-y-1/2 w-10 h-10 bg-slate-950/85 rounded-full flex items-center justify-center hover:bg-slate-950 transition-colors"
+                      className="absolute left-2 sm:left-4 top-1/2 -translate-y-1/2 w-9 h-9 sm:w-10 sm:h-10 bg-slate-950/85 rounded-full flex items-center justify-center hover:bg-slate-950 transition-colors"
                       aria-label="Previous image"
                     >
                       <FiChevronLeft size={20} />
                     </button>
                     <button
                       onClick={showNextImage}
-                      className="absolute right-4 top-1/2 -translate-y-1/2 w-10 h-10 bg-slate-950/85 rounded-full flex items-center justify-center hover:bg-slate-950 transition-colors"
+                      className="absolute right-2 sm:right-4 top-1/2 -translate-y-1/2 w-9 h-9 sm:w-10 sm:h-10 bg-slate-950/85 rounded-full flex items-center justify-center hover:bg-slate-950 transition-colors"
                       aria-label="Next image"
                     >
                       <FiChevronRight size={20} />
@@ -262,10 +262,10 @@ export default function Projects() {
                 </button>
               </div>
 
-              <div className="p-8 space-y-6">
+              <div className="p-5 sm:p-8 space-y-6">
                 <div>
                   <span className="text-sky-400 text-sm font-semibold">{t(selectedProject.categoryKey)}</span>
-                  <h2 className="text-3xl font-bold mt-2">{t(selectedProject.titleKey)}</h2>
+                  <h2 className="text-2xl sm:text-3xl font-bold mt-2">{t(selectedProject.titleKey)}</h2>
                   <p className="text-gray-400 mt-2 text-lg">{t(selectedProject.roleKey)}</p>
                   <p className="text-gray-500 mt-1 text-sm">{t(selectedProject.timelineKey)}</p>
                 </div>
@@ -330,18 +330,18 @@ export default function Projects() {
                   </div>
                 </div>
 
-                <div className="flex gap-4 pt-4">
+                <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 pt-4">
                   <motion.a
                     href={selectedProject.github}
                     whileHover={{ scale: 1.05 }}
-                    className="btn btn-primary flex items-center gap-2"
+                    className="btn btn-primary w-full sm:w-auto justify-center flex items-center gap-2"
                   >
                     <FiGithub /> {t('projects.github')}
                   </motion.a>
                   <motion.a
                     href={selectedProject.liveDemo}
                     whileHover={{ scale: 1.05 }}
-                    className="btn btn-secondary flex items-center gap-2"
+                    className="btn btn-secondary w-full sm:w-auto justify-center flex items-center gap-2"
                   >
                     <FiExternalLink /> {t('projects.liveDemo')}
                   </motion.a>

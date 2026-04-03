@@ -90,8 +90,8 @@ export default function Achievements() {
         viewport={{ once: true, amount: 0.2 }}
         className="container"
       >
-        <motion.div variants={itemVariants} className="text-center mb-16">
-          <h2 className="text-5xl md:text-6xl font-bold mb-6">{t('achievements.title')}</h2>
+        <motion.div variants={itemVariants} className="text-center mb-12 md:mb-16">
+          <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-6">{t('achievements.title')}</h2>
           <div className="w-20 h-1 bg-gradient-to-r from-sky-400 to-emerald-400 mx-auto" />
         </motion.div>
 
@@ -105,7 +105,7 @@ export default function Achievements() {
               <motion.div
                 key={idx}
                 variants={itemVariants}
-                className="glass p-8 rounded-xl text-center group cursor-pointer glass-hover"
+                className="glass p-6 md:p-8 rounded-xl text-center group cursor-pointer glass-hover"
               >
                 <motion.div
                   whileHover={{ scale: 1.1, rotate: 5 }}
@@ -152,9 +152,9 @@ export default function Achievements() {
         {/* Timeline Section */}
         <motion.div
           variants={itemVariants}
-          className="mt-20 glass p-8 rounded-xl"
+          className="mt-16 md:mt-20 glass p-5 sm:p-6 md:p-8 rounded-xl"
         >
-          <h3 className="text-2xl font-bold mb-8 text-sky-400">{t('achievements.title')}</h3>
+          <h3 className="text-xl sm:text-2xl font-bold mb-6 md:mb-8 text-sky-400">{t('achievements.title')}</h3>
           <div className="space-y-6">
             {timelineItems.map((item, idx) => (
               <motion.div
@@ -163,7 +163,7 @@ export default function Achievements() {
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ delay: idx * 0.2 }}
                 viewport={{ once: true }}
-                className="flex gap-6 pb-6 border-b border-slate-700 last:border-b-0"
+                className="flex gap-4 sm:gap-6 pb-6 border-b border-slate-700 last:border-b-0"
               >
                 <div className="relative flex flex-col items-center">
                   <div className="w-4 h-4 bg-sky-400 rounded-full relative z-10" />
@@ -173,8 +173,8 @@ export default function Achievements() {
                 </div>
                 <div className="flex-1">
                   <p className="text-sky-400 text-sm font-semibold">{t(item.dateKey)}</p>
-                  <h4 className="text-lg font-bold mt-1">{t(item.titleKey)}</h4>
-                  <p className="text-gray-400 mt-2">{t(item.descKey)}</p>
+                  <h4 className="text-base sm:text-lg font-bold mt-1">{t(item.titleKey)}</h4>
+                  <p className="text-gray-400 mt-2 text-sm sm:text-base">{t(item.descKey)}</p>
                   <div className="mt-4 flex flex-wrap gap-2">
                     {item.proofLink &&(
                       <motion.a
@@ -183,7 +183,7 @@ export default function Achievements() {
                       rel="noreferrer"
                       whileHover={{ scale: 1.03 }}
                       whileTap={{ scale: 0.97 }}
-                      className="btn btn-secondary text-sm px-4 py-2 inline-flex items-center gap-2"
+                      className="btn btn-secondary text-sm px-4 py-2 w-full sm:w-auto justify-center inline-flex items-center gap-2"
                     >
                       <FiExternalLink />
                       {t('achievements.viewCertificate')}
@@ -196,7 +196,7 @@ export default function Achievements() {
                         rel="noreferrer"
                         whileHover={{ scale: 1.03 }}
                         whileTap={{ scale: 0.97 }}
-                        className="btn btn-secondary text-sm px-4 py-2 inline-flex items-center gap-2"
+                        className="btn btn-secondary text-sm px-4 py-2 w-full sm:w-auto justify-center inline-flex items-center gap-2"
                       >
                         <FiExternalLink />
                         {t('achievements.communityPage')}

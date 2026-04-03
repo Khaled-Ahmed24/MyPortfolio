@@ -38,13 +38,13 @@ export default function Hero() {
   return (
     <section
       id="hero"
-      className="min-h-screen flex items-center justify-center relative overflow-hidden pt-20"
+      className="min-h-screen flex items-center justify-center relative overflow-hidden pt-24 md:pt-20"
     >
       {/* Background Effects */}
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute top-20 left-20 w-96 h-96 bg-sky-500/10 rounded-full blur-3xl animate-pulse" />
-        <div className="absolute bottom-20 right-20 w-96 h-96 bg-emerald-500/10 rounded-full blur-3xl animate-pulse" />
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-orange-500/5 rounded-full blur-3xl" />
+        <div className="absolute top-24 -left-16 sm:top-20 sm:left-20 w-72 h-72 sm:w-96 sm:h-96 bg-sky-500/10 rounded-full blur-3xl animate-pulse" />
+        <div className="absolute bottom-10 -right-20 sm:bottom-20 sm:right-20 w-72 h-72 sm:w-96 sm:h-96 bg-emerald-500/10 rounded-full blur-3xl animate-pulse" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-72 h-72 sm:w-96 sm:h-96 bg-orange-500/5 rounded-full blur-3xl" />
       </div>
 
       <motion.div
@@ -53,38 +53,38 @@ export default function Hero() {
         animate="visible"
         className="container z-10"
       >
-        <div className="grid lg:grid-cols-[1.2fr,0.8fr] gap-12 items-center">
-          <div className="flex flex-col text-center lg:text-left items-center lg:items-start space-y-7">
+        <div className="grid lg:grid-cols-[1.2fr,0.8fr] gap-8 lg:gap-12 items-center">
+          <div className="flex flex-col text-center lg:text-left items-center lg:items-start space-y-6 lg:space-y-7">
             <motion.div variants={itemVariants} className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-sky-400/35 bg-slate-900/50 text-sky-300 text-sm font-medium">
               <span className="w-2 h-2 rounded-full bg-sky-300 animate-pulse" />
               {t('hero.badge')}
             </motion.div>
 
-            <motion.div variants={itemVariants} className="space-y-4 max-w-3xl">
+            <motion.div variants={itemVariants} className="space-y-3 sm:space-y-4 max-w-3xl">
               <p className="text-sky-300/90 text-sm md:text-base font-semibold tracking-[0.22em] uppercase">
                 {t('hero.tagline')}
               </p>
-              <h1 className="text-5xl md:text-7xl font-bold leading-tight">
+              <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold leading-tight">
                 {t('hero.headline')}
               </h1>
-              <p className="text-xl md:text-2xl text-slate-200">
+              <p className="text-lg sm:text-xl md:text-2xl text-slate-200">
                 {t('hero.subtitle')}
               </p>
             </motion.div>
 
             <motion.p
               variants={itemVariants}
-              className="max-w-2xl text-lg text-slate-300 leading-relaxed"
+              className="max-w-2xl text-base sm:text-lg text-slate-300 leading-relaxed"
             >
               {t('hero.description')}
             </motion.p>
 
-            <motion.div variants={itemVariants} className="flex flex-col md:flex-row gap-4 pt-2">
+            <motion.div variants={itemVariants} className="flex flex-col sm:flex-row gap-3 sm:gap-4 pt-2 w-full sm:w-auto">
               <motion.a
                 href="#contact"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="btn btn-primary"
+                className="btn btn-primary w-full sm:w-auto text-center"
               >
                 {t('hero.cta1')}
               </motion.a>
@@ -92,7 +92,7 @@ export default function Hero() {
                 href="#projects"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="btn btn-secondary"
+                className="btn btn-secondary w-full sm:w-auto text-center"
               >
                 {t('hero.cta2')}
               </motion.a>
@@ -113,18 +113,18 @@ export default function Hero() {
           </div>
 
           <motion.div variants={itemVariants} className="relative flex justify-center lg:justify-end">
-            <div className="relative w-full max-w-sm">
+            <div className="relative w-full max-w-xs sm:max-w-sm">
               <motion.div
                 animate={{ rotate: 360 }}
                 transition={{ duration: 22, repeat: Infinity, ease: 'linear' }}
                 className="absolute inset-0 bg-gradient-to-r from-sky-500/30 via-blue-500/20 to-amber-400/20 rounded-3xl blur-2xl"
               />
-              <div className="relative glass rounded-3xl p-5">
+              <div className="relative glass rounded-3xl p-3 sm:p-5">
                 <div className="relative rounded-2xl overflow-hidden border border-sky-400/30">
                   <img
-                    src="/MyPortfolio/images/Profile Picture.jpg"
+                    src="/MyPortfolio/images/Profile Picture.png"
                     alt="Profile"
-                    className="w-full h-[430px] object-cover"
+                    className="w-full h-[320px] sm:h-[430px] object-cover"
                   />
                 </div>
 
@@ -137,7 +137,7 @@ export default function Hero() {
         {/* Scroll Indicator */}
         <motion.div
           variants={itemVariants}
-          className="pt-12"
+          className="pt-8 md:pt-12"
         >
           <motion.div
             variants={scrollVariants}
