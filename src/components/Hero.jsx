@@ -1,9 +1,11 @@
-import { motion } from 'framer-motion'
+import { motion, useReducedMotion } from 'framer-motion'
 import { FiArrowDown } from 'react-icons/fi'
 import { useTranslation } from 'react-i18next'
 
 export default function Hero() {
   const { t } = useTranslation()
+  const shouldReduceMotion = useReducedMotion()
+  const profileImage = `${import.meta.env.BASE_URL}images/Profile Picture.png`
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -42,8 +44,8 @@ export default function Hero() {
     >
       {/* Background Effects */}
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute top-24 -left-16 sm:top-20 sm:left-20 w-72 h-72 sm:w-96 sm:h-96 bg-sky-500/10 rounded-full blur-3xl animate-pulse" />
-        <div className="absolute bottom-10 -right-20 sm:bottom-20 sm:right-20 w-72 h-72 sm:w-96 sm:h-96 bg-emerald-500/10 rounded-full blur-3xl animate-pulse" />
+        <div className="hidden md:block absolute top-24 -left-16 sm:top-20 sm:left-20 w-72 h-72 sm:w-96 sm:h-96 bg-sky-500/10 rounded-full blur-3xl animate-pulse" />
+        <div className="hidden md:block absolute bottom-10 -right-20 sm:bottom-20 sm:right-20 w-72 h-72 sm:w-96 sm:h-96 bg-emerald-500/10 rounded-full blur-3xl animate-pulse" />
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-72 h-72 sm:w-96 sm:h-96 bg-orange-500/5 rounded-full blur-3xl" />
       </div>
 
@@ -115,15 +117,17 @@ export default function Hero() {
           <motion.div variants={itemVariants} className="relative flex justify-center lg:justify-end">
             <div className="relative w-full max-w-xs sm:max-w-sm">
               <motion.div
-                animate={{ rotate: 360 }}
-                transition={{ duration: 22, repeat: Infinity, ease: 'linear' }}
+                animate={shouldReduceMotion ? undefined : { rotate: 360 }}
+                transition={shouldReduceMotion ? undefined : { duration: 22, repeat: Infinity, ease: 'linear' }}
                 className="absolute inset-0 bg-gradient-to-r from-sky-500/30 via-blue-500/20 to-amber-400/20 rounded-3xl blur-2xl"
               />
               <div className="relative glass rounded-3xl p-3 sm:p-5">
                 <div className="relative rounded-2xl overflow-hidden border border-sky-400/30">
                   <img
-                    src="/MyPortfolio/images/Profile Picture.png"
+                    src={profileImage}
                     alt="Profile"
+                    loading="eager"
+                    decoding="async"
                     className="w-full h-[320px] sm:h-[430px] object-cover"
                   />
                 </div>

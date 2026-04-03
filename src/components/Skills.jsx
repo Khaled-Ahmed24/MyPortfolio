@@ -5,6 +5,7 @@ import { useTranslation } from 'react-i18next'
 export default function Skills() {
   const [selectedProof, setSelectedProof] = useState(null)
   const { t } = useTranslation()
+  const assetPath = (src) => src.replace('/MyPortfolio/', import.meta.env.BASE_URL)
 
   const technicalSkills = [
     {
@@ -229,8 +230,10 @@ export default function Skills() {
               >
                 <div className="relative overflow-hidden bg-slate-900 aspect-video">
                   <img
-                    src={gallery.images[0]}
+                    src={assetPath(gallery.images[0])}
                     alt={t(gallery.titleKey)}
+                    loading="lazy"
+                    decoding="async"
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-950/30 to-transparent" />
@@ -298,14 +301,16 @@ export default function Skills() {
                 {selectedProof.images.map((src, idx) => (
                   <a
                     key={src}
-                    href={src}
+                    href={assetPath(src)}
                     target="_blank"
                     rel="noreferrer"
                     className="group block rounded-xl overflow-hidden border border-slate-700/80 hover:border-sky-400/70 transition-colors"
                   >
                     <img
-                      src={src}
+                      src={assetPath(src)}
                       alt={`${t(selectedProof.titleKey)} sample ${idx + 1}`}
+                      loading="lazy"
+                      decoding="async"
                       className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
                     />
                   </a>

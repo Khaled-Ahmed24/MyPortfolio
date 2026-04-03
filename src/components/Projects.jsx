@@ -7,6 +7,7 @@ export default function Projects() {
   const { t } = useTranslation()
   const [selectedProject, setSelectedProject] = useState(null)
   const [activeImageIndex, setActiveImageIndex] = useState(0)
+  const assetPath = (src) => src.replace('/MyPortfolio/', import.meta.env.BASE_URL)
 
   const projects = [
     {
@@ -158,8 +159,10 @@ export default function Projects() {
               {/* Image Container */}
               <div className="relative overflow-hidden bg-slate-800 aspect-video">
                 <img
-                  src={project.image}
+                  src={assetPath(project.image)}
                   alt={t(project.titleKey)}
+                  loading="lazy"
+                  decoding="async"
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent opacity-60" />
@@ -226,8 +229,9 @@ export default function Projects() {
             >
               <div className="relative">
                 <img
-                  src={selectedProjectImages[activeImageIndex] ?? selectedProject.image}
+                  src={assetPath(selectedProjectImages[activeImageIndex] ?? selectedProject.image)}
                   alt={t(selectedProject.titleKey)}
+                  decoding="async"
                   className="w-full h-64 sm:h-80 md:h-96 object-cover"
                 />
                 {selectedProjectImages.length > 1 && (
@@ -285,8 +289,10 @@ export default function Projects() {
                         }`}
                       >
                         <img
-                          src={src}
+                          src={assetPath(src)}
                           alt={`${t(selectedProject.titleKey)} screenshot ${idx + 1}`}
+                          loading="lazy"
+                          decoding="async"
                           className={`w-full h-44 object-cover transition-transform duration-300 ${
                             idx === activeImageIndex ? 'scale-[1.02]' : 'group-hover:scale-105'
                           }`}
