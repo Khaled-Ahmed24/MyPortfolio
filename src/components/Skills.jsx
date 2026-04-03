@@ -154,9 +154,8 @@ export default function Skills() {
       
       <motion.div
         variants={containerVariants}
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, amount: 0.2 }}
+        initial="visible"
+        animate="visible"
         className="container"
       >
         <motion.div variants={itemVariants} className="text-center mb-12 md:mb-16">
